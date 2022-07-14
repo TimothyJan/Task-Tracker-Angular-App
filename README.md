@@ -1,5 +1,5 @@
 # Task-Tracker-Angular-App
-Task Tracker Angular app using a <a href="https://www.npmjs.com/package/json-server">JSON Server</a>. Run the backend server using <code>npm run server</code> and then run the angular app with <code>ng serve</code>. CRUD(Create, Read, Update and Delete) tasks and double click tasks to toggle reminder functionality. 
+Task Tracker Angular app using a <a href="https://www.npmjs.com/package/json-server">JSON Server</a>. Run the backend server using <code>npm run server</code> and then run the angular app with <code>ng serve</code>. CRUD(Create, Read, Update and Delete) tasks and double click tasks to toggle reminder functionality. When adding a new task se;ect your "return" key to save and submit the task.
 
 <hr>
 
