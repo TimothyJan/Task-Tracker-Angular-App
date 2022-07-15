@@ -12,14 +12,25 @@
   </div>
   <!-- Day and Time -->
   <div class="form-control">
-    <label for="day">Day & Time</label>
+    <label for="date">Date</label>
     <input
-      type="text"
-      name="day"
-      [(ngModel)]="day"
-      id="day"
-      placeholder="Add Day & Time">
+      type="date"
+      name="date"
+      [(ngModel)]="date"
+      id="date"
+      placeholder="Add Date">
   </div>
+
+  <div class="form-control">
+    <label for="time">Time</label>
+    <input
+      type="time"
+      name="time"
+      [(ngModel)]="time"
+      id="time"
+      placeholder="Add Time">
+  </div>
+
   <!-- Set Reminder -->
   <div class="form-control form-control-check">
     <label for="reminder">Set Reminder</label>
@@ -31,3 +42,4 @@
   </div>
   <input type="submit" value="Save Task" class="btn btn-block">
 </form>
+

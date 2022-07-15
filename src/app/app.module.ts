@@ -9,10 +9,13 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/add-task/add-task.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DatePipe } from './pipes/date.pipe';
+import { TimePipe } from './pipes/time.pipe';
+
 
 const appRoutes: Routes = [
   { path: '', component: TasksComponent },
@@ -28,14 +31,19 @@ const appRoutes: Routes = [
     TaskItemComponent,
     AddTaskComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    DatePipe,
+    TimePipe,
   ],
   imports: [
     BrowserModule,
+
+    FormsModule,
+
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
   ],
   providers: [],
   bootstrap: [AppComponent]

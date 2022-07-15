@@ -11,7 +11,8 @@ import { Task } from 'src/app/Task';
 export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
   text: string;
-  day: string;
+  date: string;
+  time: string;
   reminder: boolean = false;
   subscription:Subscription;
   showAddTask:boolean;
@@ -31,17 +32,21 @@ export class AddTaskComponent implements OnInit {
       return;
     }
 
+    console.log(this.date);
+    console.log(this.time);
+
     const newTask = {
       text: this.text,
-      day: this.day,
+      date: this.date,
+      time: this.time,
       reminder: this.reminder
     };
 
     this.onAddTask.emit(newTask);
 
     this.text = '';
-    this.day = '';
+    this.date = '';
+    this.time = '';
     this.reminder = false;
   }
-
 }
